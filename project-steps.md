@@ -69,7 +69,37 @@ To exit the terminal: `control + C`
 
 <br>
 
-How to treat potentionally incoming classes in our custom component, from the place where it is used?
+Inside `Card` you output the content that should be wrapped with it.
+
+That content can be accessed with `props.children`.
+
+`props` need to be passed both in `Card` and component using it.
+
+This...
+
+    <div>{props.children}</div>;
+
+... is equivalent to this:
+<br>
+
+    <Card>
+      <some content>
+    </Card>
+
+<br><br>
+
+When importing CSS modules, use import _classes_ or _styles_.
+
+In `className`, pass the class name (`classes`, `styles`):
+<br>
+
+    <div className={classes.card}>
+
+<br><br>
+
+### How to treat classes potentionally incoming from the outside in our custom component, from the place where it is used?
+
+<br><br>
 
 It should be applied together with the class applied to the `div`, which is rendered from inside of the `Card` component itself.
 
