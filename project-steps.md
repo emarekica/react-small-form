@@ -37,19 +37,76 @@ To exit the terminal: `control + C`
 
 <br>
 
-`label`+ `input` in JSX
+## STEPS
+
 <br>
 
-    <label htmlFor="username">Username</label>
-    <input id="username" type="text" />
+1. `AddUser` component creation
+
+2. `Card` component creation (re-usable, UI)
+
+3. `Button` component creation (re-usable, UI)
+
+4. managing user input **state**
+
+5. adding **validation**, **reset**
+
+6. `UserList` component creation
+
+7. `UserList` **state** management
+
+8. `ErrorModal` component creation
+
+9. `ErrorModal` **state** management
 
 <br><br>
 
-<hr />
+---
 
 <br>
 
-`onSubmit` put on the <form> in JSX specifies a function that should be executed when form is submitted.
+## **CARD**
+
+<br>
+
+How to treat potentionally incoming classes in our custom component, from the place where it is used?
+
+It should be applied together with the class applied to the `div`, which is rendered from inside of the `Card` component itself.
+
+Apply 2 classes:
+
+1.  comming from the module imported directly to the Card component (here: `Card.module.css`):
+    <br>
+
+            ${classes.card}
+
+2.  comming from outside via `props` from where `Card` is used:
+    <br>
+
+            {props.outsideClass}
+
+    <br><br>
+
+NOTE: `outsideClass` is arbitrary, it can be `cowMooBee`
+<br>
+
+    <div className={`${classes.card} ${props.outsideClass}`}>
+
+<br><br>
+
+Then, add it in the place where `Card` is used:
+<br>
+
+`AddUser.js`:
+<br>
+
+```js
+return (
+<Card outsideClass={classes.input}>
+...
+)
+```
+
 <br><br>
 
 <hr />
@@ -98,7 +155,27 @@ output content between button tags:
 <br><br>
 
 It will show whatever is passed in in the place where the Button is used.
+
+<br><br>
+
+`label` + `input` in JSX
 <br>
+
+    <label htmlFor="username">Username</label>
+    <input id="username" type="text" />
+
+<br><br>
+
+<hr />
+
+<br>
+
+`onSubmit` put on the `form` in JSX specifies a function that should be executed when form is submitted.
+<br><br>
+
+     <form onSubmit={addUserHandler}>
+
+<br><br>
 
 `AddUser.js`:
 <br>
