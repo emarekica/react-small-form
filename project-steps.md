@@ -113,11 +113,11 @@ Apply 2 classes:
 2.  comming from outside via `props` from where `Card` is used:
     <br>
 
-            {props.outsideClass}
+            ${props.outsideClass}
 
     <br><br>
 
-NOTE: `outsideClass` is arbitrary, it can be `cowMooBee`
+NOTE: `outsideClass` name is arbitrary, it can be `cowMooBee`
 <br>
 
     <div className={`${classes.card} ${props.outsideClass}`}>
