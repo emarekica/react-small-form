@@ -4,12 +4,14 @@ import classes from "./Button.module.css";
 
 const Button = (props) => {
   return (
-    <button>
+    <button
       className={classes.button}
-      {/* type set where button is used + fallback */}
+      // type set where button is used + fallback
       type={props.type || "button"}
-      {/* event listener */}
-      onClick={props.custonOnClick}
+      // event listener
+      onClick={props.customOnClick}
+    >
+      {props.children}
     </button>
   );
 };
