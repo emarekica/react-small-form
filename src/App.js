@@ -12,6 +12,7 @@ function App() {
         ...previousUserListSnapshot,
         {
           name: newUserName,
+          id: Math.random().toString(),
         },
       ];
     });
@@ -20,7 +21,7 @@ function App() {
   return (
     <div>
       <AddUser onAddingNewUser={addNewUserHandler} />
-      <UserList usersFromInput={[]} />
+      <UserList usersFromInput={usersList} />
     </div>
   );
 }
