@@ -1,3 +1,25 @@
+# React Form
+
+<br>
+
+<br><br>
+
+<hr />
+
+<br>
+
+## Improvements
+
+<br>
+
+[ ] Add [password validation](https://stackoverflow.com/questions/12090077/javascript-regular-expression-password-validation-having-special-characters)
+
+<br><br>
+
+<hr />
+
+<br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
