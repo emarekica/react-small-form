@@ -11,6 +11,7 @@ const AddUser = (props) => {
   // input state management
   const [enteredUserame, setEnteredUsername] = useState("");
   const [enteredPassword, setEnteredPassword] = useState("");
+  const [error, setError] = useState();
 
   // executes when form sent
   const addUserHandler = (e) => {
@@ -21,6 +22,12 @@ const AddUser = (props) => {
       enteredUserame.trim().length === 0 ||
       enteredPassword.trim().length === 0
     ) {
+      // set error state
+      setError({
+        errorTitle: "Invalid input",
+        errorMessage: "Please try again with non-empty values.",
+      });
+
       return;
     }
 
@@ -45,12 +52,20 @@ const AddUser = (props) => {
     setEnteredPassword(e.target.value);
   };
 
+  const errorHandler = () => {
+    setError(null);
+  };
+
   return (
     <div>
-      <ErrorModal
-        errorTitle="An Error Occured"
-        errorMessage="Something went wrong."
-      />
+      {/* conditionally handling error modal */}
+      {error && (
+        <ErrorModal
+          errorTitle="An Error Occured"
+          errorMessage="Something went wrong."
+          onHandlingError={errorHandler}
+        />
+      )}
 
       <Card classFromOutside={classes.input}>
         <header>
