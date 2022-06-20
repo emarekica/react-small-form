@@ -986,15 +986,17 @@ const addUserHandler = (event) => {
 
 <br><br>
 
-Add a `key` (id) prop with unique value to the li in `UsersList`. It should be dynamic, not hard-coded.
+Add a `key` (id) `prop` with unique value to the `li` in `UsersList`. It should be dynamic, not hard-coded.
 <br><br>
 
 `App.js`
+<br>
+
+    id: Math.random().toString();
+
 <br><br>
 
 ```js
-id: Math.random().toString();
-
 const addNewUserHandler = (uName, uAge) => {
   setUsersList((previousUserListStateSnapshot) => {
     return [
@@ -1008,19 +1010,21 @@ const addNewUserHandler = (uName, uAge) => {
 <br><br>
 
 `UsersList.js`
+<br>
+
+    <li key={user.id}>
+
 <br><br>
 
 ```js
-<li key={user.id}>
-
 <Card className={classes.users}>
-    <ul>
-        {props.usersFromInput.map((user) => (
-            <li key={user.id}>
-                {user.name} ({user.age} years old)
-            </li>
-        ))}
-    </ul>
+  <ul>
+    {props.usersFromInput.map((user) => (
+      <li key={user.id}>
+        {user.name} ({user.age} years old)
+      </li>
+    ))}
+  </ul>
 </Card>
 ```
 
