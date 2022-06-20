@@ -1470,7 +1470,7 @@ We set the error state to slightly different object, it holds different values i
 
 <br><br>
 
-Do it by creating an error hangler function which resets the error to `undfined`, `null` or any other falsy value.
+Do it by creating an error handler function which resets the error to `undfined`, `null` or any other falsy value.
 <br><br>
 
 ```js
@@ -1496,7 +1496,8 @@ Register clicks and trigger error handler function on:
 
 **Register clicks** with `onClick` attribute.
 
-**Trigger the error handler function** with `props.onHandlingErro`r.
+**Trigger the error handler function** with `props.onHandlingError`.
+<br><br>
 
     We can add it to the Button component because it registers it, there is onClick={props.customOnClick}  prop in the original component JSX.
 
