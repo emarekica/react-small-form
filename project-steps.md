@@ -606,7 +606,7 @@ export default AddUser;
 
 One way: add unordered list element in the JSX, manage the state by adding another state.
 
-**Idea of React is to have a lot of small component which have a logic with its own responsibility**. Keep components small and focused on their task.
+**Idea of React is to have a lot of small components which have a logic with its own responsibility**. Keep components small and focused on their task.
 <br>
 
 Split **outputting** and **fetching** into 2 components.
@@ -630,7 +630,7 @@ User data collected in `AddUser` component.
 New component, `UsersList` will output user data.
 <br><br>
 
-In the `ul`, go through a list of users that you get from AddUser and output an `li` for every user.
+In the `ul`, go through a list of users that you get from `AddUser` and output an `li` for every user.
 <br><br>
 
 Users as array of user data will come through `props`, through property with my arbitrary name (here `usersFromInput`).
@@ -686,6 +686,8 @@ It can be done because in the Card component we enabled the outside classes to b
 <br><br>
 
 <hr />
+
+<br>
 
 The whole code for `UsersList`:
 <br><br>

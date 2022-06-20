@@ -1,7 +1,8 @@
+// fetches input
+
 import React, { useState } from "react";
 
 import Card from "../UI/Card";
-
 import classes from "./AddUser.module.css";
 
 const AddUser = (props) => {
