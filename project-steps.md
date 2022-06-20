@@ -1234,16 +1234,17 @@ export default ErrorModal;
 ### **Rendering modal**
 
 <br>
-... as part of AddUser component
+
+... as part of `AddUser` component
 <br><br>
 
 If you want to render it over the entire UI, it should be as high as possible in the component tree: in the `App.js`. It can be used also in different places.
 <br>
 
-If you use 2 components next to each other in JSX, make sure to wrap both of them in an extra <div>.
+If you use 2 components next to each other in JSX, make sure to wrap both of them in an extra `div`.
 <br><br>
 
-Code from the component where modal is rendered:
+Code from the component where modal is rendered (`AddUser`):
 <br><br>
 
 ```js
@@ -1281,7 +1282,7 @@ export default AddUser;
 
 <br><br>
 
-Backdrop is an overlay between modal and the main page. Prevents us from interacting with the main page while the Modal is up.
+Backdrop is an overlay between modal and the main page. Prevents interaction with the main page while the Modal is up.
 
 Make an empty `div` in the `ErrorModal` component.
 <br><br>

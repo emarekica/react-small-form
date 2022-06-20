@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 
 import Card from "../UI/Card";
+import ErrorModal from "../UI/ErrorModal";
+
 import classes from "./AddUser.module.css";
 
 const AddUser = (props) => {
@@ -45,6 +47,11 @@ const AddUser = (props) => {
 
   return (
     <div>
+      <ErrorModal
+        errorTitle="An Error Occured"
+        errorMessage="Something went wrong."
+      />
+
       <Card classFromOutside={classes.input}>
         <header>
           <h1>Add a new user</h1>
@@ -55,6 +62,7 @@ const AddUser = (props) => {
           <input
             id="username"
             type="text"
+            // renders user input
             value={enteredUserame}
             onChange={usernameChangeHandler}
           />
