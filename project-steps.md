@@ -293,30 +293,35 @@ export default AddUser;
 <br><br>
 
 2. Use the collected data in `addUserHandler()`.
-   <br>
+   <br><br>
 
 **Collecting input values**
 <br>
 
-**Use state management**. Update state with every key stroke >> save user's input in that state variable.
+**Use state management**.
+<br>
+Update state with every key stroke >> save user's input in that state variable.
 <br>
 
-1. Import `{ useState }` and initialize it.
+1.  Import `{ useState }` and initialize it.
 
-2. Define the default/initial starting state.
+2.  Define the default/initial starting state. Since we want initial state to be empty >> `("")`
+    <br><brs>
 
-Since we want initial state to be empty >> `("")`
-<br>
+            const [enteredUsername, setEnteredUsername] = useState("");
 
-    const [enteredUsername, setEnteredUsername] = useState("");
-    const [enteredAge, setEnteredAge] = useState("");
+            const [enteredAge, setEnteredAge] = useState("");
 
 <br><br>
 
 3. make event listener triggered on input keystroke
 
 It gets event object because we listen to default DOM event, with more info.
-<br><br>
+
+- `event` is the event that happened (keystroke); can be `e`
+- `target` is the element that triggered the event (input)
+- `value` is the value of the input
+  <br><br>
 
 ```js
 // functions triggered on user input keystroke
@@ -332,13 +337,17 @@ const ageChangeHandler = (event) => {
 
 <br><br>
 
-4. Access the user input through event.target.value.
+4. Access the user input through `event.target.value`.
    <br>
 
-`target` = input
+`target` = `input`
 
-`value` = currently entered value of the input
+`value` = currently entered value of the `input`
 <br><br>
+
+<hr />
+
+<br>
 
 Final code:
 <br><br>
