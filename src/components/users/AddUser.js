@@ -10,12 +10,16 @@ const AddUser = (props) => {
   const [enteredPassword, setEnteredPassword] = useState("");
 
   // executes when form sent
-  // handles data collected from inpt
   const addUserHandler = (e) => {
     e.preventDefault();
+
+    //reset
+    setEnteredUsername("");
+    setEnteredPassword("");
   };
 
   // triggered on user input keystroke
+  // handle data collected from inpt
   const usernameChangeHandler = (e) => {
     // set to what user curently entered
     setEnteredUsername(e.target.value);
