@@ -1,6 +1,37 @@
-# React Form
+# Small Form
 
 <br>
+
+Example project of a small form made in React.
+Basic concepts are covered:
+
+<br><br>
+
+<hr />
+
+<br>
+
+## Basics covered
+
+<br>
+
+- React project instalation
+
+- component creation
+
+- component styling
+
+- `props`
+
+- state management (`useState` hook, lifting up state)
+
+- handling lists
+
+- modal window
+
+- validation
+
+- input management
 
 <br><br>
 
@@ -13,6 +44,8 @@
 <br>
 
 [ ] Add [password validation](https://stackoverflow.com/questions/12090077/javascript-regular-expression-password-validation-having-special-characters)
+
+[ ] Change styling
 
 <br><br>
 
