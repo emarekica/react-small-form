@@ -3,9 +3,9 @@
 <br>
 
 Example project of a small form made in React.
-Basic concepts are covered:
+Basic concepts are covered.
 
-<br><br>
+<br>
 
 <hr />
 
