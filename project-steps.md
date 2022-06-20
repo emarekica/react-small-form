@@ -1669,3 +1669,11 @@ const AddUser = (props) => {
 
 export default AddUser;
 ```
+
+<br><br>
+
+<hr />
+
+[React Forms](https://reactjs.org/docs/forms.html)
+
+[MDN Global event handlers](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers#properties)
