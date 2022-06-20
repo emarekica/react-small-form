@@ -13,7 +13,17 @@ const AddUser = (props) => {
   const addUserHandler = (e) => {
     e.preventDefault();
 
-    //reset
+    // validation
+    if (
+      enteredUserame.trim().length === 0 ||
+      enteredPassword.trim().length === 0
+    ) {
+      return;
+    }
+
+    // add password regex check
+
+    // reset
     setEnteredUsername("");
     setEnteredPassword("");
   };
@@ -36,12 +46,22 @@ const AddUser = (props) => {
           <h1>Add a new user</h1>
         </header>
 
-        <form onFormSubmit={addUserHandler}>
+        <form onSubmit={addUserHandler}>
           <label htmlFor="username">Username:</label>
-          <input id="username" type="text" />
+          <input
+            id="username"
+            type="text"
+            value={enteredUserame}
+            onChange={usernameChangeHandler}
+          />
 
           <label htmlFor="password">Password:</label>
-          <input id="password" type="password" />
+          <input
+            id="password"
+            type="password"
+            value={enteredPassword}
+            onChange={passwordChangeHandler}
+          />
 
           <button type="submit">ADD</button>
         </form>
