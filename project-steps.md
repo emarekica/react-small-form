@@ -929,7 +929,7 @@ use this:
 _Explanation:_
 <br>
 
-What is passed in via props is a function `addNewUserHandler` from the `App.js` forwarded via `onAddUserButtonClicked` that is on the `AddUser` element in the `App.js`. Therefore it can be executed inside of AddUser` component.
+What is passed in via props is a function `addNewUserHandler` from the `App.js` forwarded via `onAddUserButtonClicked` that is on the `AddUser` element in the `App.js`. Therefore it can be executed inside of `AddUser` component.
 
 It forwards the data entered by the user, and fetched by the `AddUser` component back to the `App.js` via props and via that `onAddUserButtonClicked()` function.
 

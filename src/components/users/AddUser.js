@@ -24,6 +24,9 @@ const AddUser = (props) => {
 
     // add password regex check
 
+    // add new user
+    props.onAddingNewUser(enteredUserame);
+
     // reset
     setEnteredUsername("");
     setEnteredPassword("");
