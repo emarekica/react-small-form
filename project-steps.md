@@ -11,6 +11,14 @@ Install node_modules:
 
 <br><br>
 
+If you need to make a new app from scratch, run this in Node:
+
+    npx create-react-app my-app
+    cd my-app
+    npm start
+
+<br><br>
+
 Add `node_modules`, `package.json`, `package-lock.json` to `.gitignore`.
 
 <br><br>
