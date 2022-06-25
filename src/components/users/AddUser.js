@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 
+import Button from "../UI/Button";
 import Card from "../UI/Card";
 import ErrorModal from "../UI/ErrorModal";
 
@@ -90,7 +91,7 @@ const AddUser = (props) => {
             onChange={passwordChangeHandler}
           />
 
-          <button type="submit">ADD</button>
+          <Button type="submit">ADD</Button>
         </form>
       </Card>
     </div>
