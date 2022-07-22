@@ -43,9 +43,13 @@ Basic concepts are covered.
 
 <br>
 
+[ ] **bug:** check error modal CSS in queries
+
+[ ] implement SCSS
+
 [ ] Add [password validation](https://stackoverflow.com/questions/12090077/javascript-regular-expression-password-validation-having-special-characters)
 
-[ ] Change styling
+[ ] add strike-trhough when added item clicked, make it intuitive
 
 <br><br>
 
